@@ -12,9 +12,9 @@ function zvcPanel(ax, T, xv, yv, X, Y, TwoU, C, mu, L)
     plot(ax, -mu,  0, 'o', 'MarkerSize', 8, 'MarkerFaceColor', T.accent1, 'MarkerEdgeColor', 'none')
     plot(ax, 1-mu, 0, 'o', 'MarkerSize', 4, 'MarkerFaceColor', T.fg,      'MarkerEdgeColor', 'none')
     plot(ax, L(:,1), L(:,2), '+', 'Color', T.accent3, 'MarkerSize', 7, 'LineWidth', 1.2)
-    text(ax, L(:,1), L(:,2) + 0.13, {'L1','L2','L3','L4','L5'}, ...
+       text(ax, L(:,1), L(:,2) + 0.13, {'L1','L2','L3','L4','L5'}, ...
          'Color', T.fg, 'FontName', T.font, 'FontSize', 8, ...
-         'HorizontalAlignment', 'center')
+         'HorizontalAlignment', 'center', 'Clipping', 'on')
     styleAxes(ax, T)
     set(ax, 'YDir', 'normal', 'Layer', 'top')
     axis(ax, 'equal'); xlim(ax, [-1.5 1.5]); ylim(ax, [-1.5 1.5])

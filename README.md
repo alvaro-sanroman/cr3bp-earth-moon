@@ -20,7 +20,7 @@ The project builds, one step at a time, the tools needed to explain which ones g
 |---|---|---|
 | 1 | `step1_eom.m` | Equations of motion in the rotating frame; Jacobi constant as an accuracy check (drift 2.9 × 10⁻¹¹ over 130 days) |
 | 2 | `step2_zeroVelocity.m`, `step2_hillSurface.m`, `step2_necksAnimation.m` | Zero-velocity curves, Hill surfaces and the opening of the L1 and L2 necks |
-| 2a | (inside step 2) | The five libration points with `fzero`, checked against Wakker's table |
+| 2a | `src/cr3bp/lagrangePoints.m` | The five libration points with `fzero`, checked against Wakker's table |
 | 3 | `step3_transit.m` | Numerical experiment: fan of launch directions at C = 3.18, transit window |
 | 4a | `step4a_linearization.m`, `step4a_mcgehee.m` | Linear dynamics at L1 (saddle × centre × centre), McGehee representation |
 | 4b | `step4b_lyapunov.m` | State transition matrix and differential correction of a Lyapunov orbit |
@@ -83,7 +83,7 @@ Requires MATLAB (base installation, no toolboxes; developed in R2025b).
 
 ## References
 
-The theory follows two texts used as guides in the *Fundamentals of Astrodynamics* course at Delft University of Technology:
+The model follows the course reader of the *Fundamentals of Astrodynamics* course at Delft University of Technology [1]. The periodic orbits and invariant manifolds, which go beyond the course, follow [2].
 
 1. K. F. Wakker, *Fundamentals of Astrodynamics*, Institutional Repository, Delft University of Technology, 2015, Chap. 3. Course reader of Fundamentals of Astrodynamics, TU Delft.
 2. W. S. Koon, M. W. Lo, J. E. Marsden and S. D. Ross, *Dynamical Systems, the Three-Body Problem and Space Mission Design*, 2nd ed., 2022, Chaps. 2 and 4.
